@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0b0214; 
+    overflow: hidden; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.galaxia {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Letrero del medio */
+.Para_Ti {
+    position: absolute;
+    width: 85%;
+    font-size: 1.8rem;
+    color: #ffffff;
+    text-align: center;
+    background: rgba(255, 20, 147, 0.15); 
+    backdrop-filter: blur(8px); 
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 25px rgba(255, 20, 147, 0.4); 
+    z-index: 10;
+}
+
+/* Estilo de tus fotos */
+.foto {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    object-fit: cover; 
+    border-radius: 12px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Distribución en pantalla y asignación de animación individual */
+.f1 { top: 8%; left: 6%; transform: rotate(-15deg); animation: flotar1 4s ease-in-out infinite; }
+.f2 { top: 18%; right: 6%; transform: rotate(12deg); animation: flotar2 4.5s ease-in-out infinite; }
+.f3 { bottom: 10%; left: 8%; transform: rotate(8deg); animation: flotar1 5s ease-in-out infinite; }
+.f4 { bottom: 18%; right: 6%; transform: rotate(-18deg); animation: flotar2 3.8s ease-in-out infinite; }
+
+/* Animaciones de movimiento sutil de arriba a abajo */
+@keyframes flotar1 {
+    0%, 100% { transform: translateY(0) rotate(-15deg); }
+    50% { transform: translateY(-10px) rotate(-12deg); }
+}
+
+@keyframes flotar2 {
+    0%, 100% { transform: translateY(0) rotate(12deg); }
+    50% { transform: translateY(-12px) rotate(15deg); }
+}
